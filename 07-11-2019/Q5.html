@@ -1,0 +1,71 @@
+
+
+
+
+<form action="success.html">
+   First Name:<input type="text" name="firstName"/> <br/>
+   Last Name:<input type="text" name="lastName"/> <br/>
+   Age      :<input type="text" name="age"/><br/>
+   Email    :<input type="text" name="email"/><br/>
+   Address  :<textarea name="address" rows="5" cols="15"></textarea> <br/>
+   Password :<input type="password" name="password"/><br/>
+   <input type="submit" value="submit" onclick="return validate()"/>
+</form>
+
+<script> 
+    function validate()
+	{
+		var myForm=document.forms[0];
+		var firstName = myForm.firstName;
+		if(firstName.value.length == 0)
+		{
+			alert("please enter first name");
+		    firstName.focus();
+			return false;
+		}
+
+		var lastName = myForm.lastName;
+		if(lastName.value.length == 0)
+		{
+			alert("please enter last name");
+			lastName.focus();
+			return false;
+		}
+
+		var age = myForm.age;
+		if(age.value.length == 0)
+		{
+			alert("please enter age");
+			age.focus();
+			return false;
+		}
+
+		var email = myForm.email;
+		if(email.value.length == 0)
+		{
+			alert("please enter email");
+			email.focus();
+			return false;
+		}
+
+		var address = myForm.address;
+		if(address.value.length == 0)
+		{
+			alert("please enter address");
+			address.focus();
+			return false;
+		}
+
+		var password = myForm.password;
+		if(password.value.length == 0)
+		{
+			alert("please enter password");
+			password.focus();
+			return false;
+		}
+	}
+
+</script>
+
+
+

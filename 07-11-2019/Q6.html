@@ -1,0 +1,34 @@
+
+<form action="success.html">
+    Gender:
+	    <input type ="radio" name="gender" value="M"/> Male &nbsp;&nbsp;
+		<input type ="radio" name="gender" value="F"/> Female &nbsp;&nbsp;
+		<input type ="radio" name="gender" value="O"/> Others <br/>
+		 <input type="submit" value="submit" onclick="return validateGender()"/>
+</form>
+
+<script>
+	
+	function validateGender()
+	{
+     	var myForm=document.forms[0];
+		var gender=myForm.gender;
+		var unCheckedStatus = true;
+		for(var i=0;i<gender.length;i++)
+		{
+			if(gender[i].checked)
+			{
+				unCheckedStatus = false;
+				break;
+			
+			}
+		}
+		if(unCheckedStatus)
+		{
+			alert("please select gender");
+			gender[0].focus();
+			return false;
+		}
+
+	}
+</script>

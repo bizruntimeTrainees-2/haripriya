@@ -1,0 +1,23 @@
+<form action="success.html">
+   First Name:<input type="text" name="firstName"/> <br/>
+   Last Name:<input type="text" name="lastName"/> <br/>
+   <input type="submit" value="submit" onclick="return validate()"/>
+</form>
+
+<script> 
+    function validate()
+	{
+		if(document.forms[0].firstName.value.length == 0)
+		{
+			alert("please enter first name");
+			document.forms[0].firstName.focus();
+			return false;
+		}
+		if(document.forms[0].lastName.value.length == 0)
+		{
+			alert("please enter last name");
+			document.forms[0].lastName.focus();
+			return false;
+		}
+	}
+</script>
