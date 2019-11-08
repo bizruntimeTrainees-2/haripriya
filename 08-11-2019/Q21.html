@@ -1,0 +1,13 @@
+<span id="s1">I am from open span</span><br/>
+<span id="s2" style="visibility:hidden">I am from hidden span</span><br/>
+
+<input type="button" value="change" onclick="changeOpenSpansContent()"/>
+
+<script>
+  function changeOpenSpansContent()
+  {
+	  document.getElementById("s1").innerHTML=
+	        document.getElementById("s2").innerHTML;
+
+  }
+  </script>

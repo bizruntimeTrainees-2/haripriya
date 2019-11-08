@@ -1,0 +1,87 @@
+
+<form action="success.html">
+    State:
+	   <select name="state" onchange="populateDistricts()">
+	      <option value="">Select State</option>
+	      <option value="AP">AndhraPradash</option>
+	      <option value="KL">Kerala</option>
+	      <option value="TN">TamilNadu</option>
+	      <option value="TG">Telangana</option>
+	      <option value="KA">Kernataka</option>
+       </select> <br/>
+
+
+   <span id="districts">
+	   District<select name="district">
+	      <option value="">Select Stae</option>
+          </select>
+  </span>
+</form>
+
+	    
+   <script>
+    function populateDistricts()
+	{
+		 var state = document.forms[0].state.value;
+		 var districts = document.getElementById(state).innerHTML;
+		 document.getElementById("districts").innerHTML=districts;
+
+
+	}
+	</script>
+
+	<span id="AP" style="visibility:hidden">
+	   District<select name="district">
+	     
+	      <option value="">Select District</option>
+	      <option value="Kadapa">Kadapa</option>
+	     <option value="Chittoor">chittor</option>
+	      <option value="Kurnool">chittor</option>
+		  </select>
+	  </span>
+
+	<span id="KL" style="visibility:hidden">
+	   District<select name="district">
+	     
+	      <option value="">Select District</option>
+		  <option value="Ernakulam">ernakulam</option>
+	      <option value="Kollam">kollam</option>
+	      <option value="Kannur">kannur</option>
+	      
+		  </select>
+	  </span>
+
+	<span id="TN" style="visibility:hidden">
+	   District<select name="district">
+	     
+	      <option value="">Select District</option>
+		  <option value="Vellore">vellore</option>
+	      <option value="Salem">salem</option>
+	      <option value="Krishnagiri">salem</option>
+		  
+		  </select>
+	  </span>
+
+	<span id="TG" style="visibility:hidden">
+	   District<select name="district">
+	     
+	      <option value="">Select District</option>
+		  <option value="Warangal">warangal</option>
+	      <option value="Kamareddy">kamareddy</option>
+	      <option value="Suryapet">suryapet</option>
+
+		  
+		  </select>
+	  </span>
+
+	<span id="KA" style="visibility:hidden">
+	   District<select name="district">
+	     
+	      <option value="">Select District</option>
+		  <option value="Ballari">ballari</option>
+	      <option value="Bidar">bidar</option>
+	      <option value="Bangaluru">bangaluru</option>
+
+		  
+		  </select>
+	  </span>
