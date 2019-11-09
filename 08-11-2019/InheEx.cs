@@ -5,6 +5,11 @@ namespace ConsoleApplication1
     {
         public string name;
         public string subject;
+        GFG(String name,String subject)
+        {
+                
+
+        }
         public void readers(string name, string subject)
         {
             this.name = name;
@@ -26,6 +31,11 @@ namespace ConsoleApplication1
         {
             GeeksforGeeks g = new GeeksforGeeks();
             g.readers("Kirti", "C#");
+            GFG g1 = new GFG();
+            GFG g1 = new GFG("hhh","c#");
+
+     
+
         }
     }
 }
