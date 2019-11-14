@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
-<body onafterprint="myFunction()">
+<body>
 
-<h1>Try to print this document</h1>
+<p>Click the button to display the date.</p>
 
+<button onclick="displayDate()">The time is?</button>
 
 <script>
-function myFunction() {
-  alert("This document is now being printed");
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
 }
 </script>
 
+<p id="demo"></p>
+
 </body>
-</html>
+</html> 

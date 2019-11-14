@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>
+      WEBSOCKET
+      </title>
+      <style type="text/css">
+      #content{
+        width:400px;
+        margin:0 auto;
+        text-align:center;
+      }
+      #msgs
+      {
+        margin-top:20px;
+      }
+      </style>
+      </head>
+      <body>
+        <div id="content">
+          <h2>HTML5 websocket</h2>
+          <button onclick="sendWebSocketMsg();">send websocket msg</button>
+          <div id="msgs" >
+            </div>
+
+            <script type="text/javascript">
+            var msgs=document.getElementById("msgs");
+
+            function log(msg){
+              msgs.innerHTML+=msg +"<br/><br/>";
+            }
+            function sendWebSocketMsg(){
+              if("webSocket" in window){
+                log("webSocket is not support by your browser");
+              
+              var ws=new WebSocket("wss://echo.websocket.org");
+              ws.onopen=function(){
+                var msg="Hello from ABC";
+                log("Connection opened with echo webserver");
+                ws.send(msg);
+                log("message sent:"+msg);
+              };
+              ws.onmessage=function(evt){
+              var receiveMsg=evt.data;
+              log("Message Received:"+msg);
+              };
+              ws.onclose=function(){
+                log("connection is closed");
+
+              }
+              
+            }else{
+                log("webSocket is not support by your browser");
+              }
+
+              }
+              </script>
+        
+            </body>
+
+</html>
