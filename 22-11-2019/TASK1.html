@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel ="stylesheet" type="text/css" href="TASK1.css"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src = "TASK1.js"></script> 
+</head>
+<body>
+<div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'crud')">CRUD</button>
+    <button class="tablinks" onclick="openCity(event, 'header')">HEADERS</button>
+    <button class="tablinks" onclick="openCity(event, 'AUTHENTICATION')">AUTHENTICATION</button>
+</div>
+
+<div id="crud" class="tabcontent"> 
+    <button class="btn">GET</button>
+    <span id="add">
+    <input type="button" value="+" onclick="display()">
+    </span>
+    <button type="submit" class="btn" onclick="get()">SUBMIT</button></br>
+
+
+
+    <button class="btn">POST</button>
+    <input type="text">
+    <button type="submit" class="btn" onclick="post()">SUBMIT</button></br>
+
+
+
+    <button class="btn">POST FORM DATA</button>
+    <input type="button" value="+" onclick="display1()">
+    <span id="add1"></span>
+    <button class="submit" onclick="postformdata()">SUBMIT</button></br>
+
+
+
+    <button class="btn">PUT</button>
+    <input type="text">
+    <button type="submit" class="btn" onclick="put()">Submit</button></br>
+
+
+
+    <button class="btn">PATCH</button>
+    <input type="text">
+    <button type="submit" class="btn" onclick="patch()">SUBMIT</button></br>
+
+
+    <button class="btn">DELETE</button>
+    <input type="text">
+    <button type="submit" class="btn" onclick="Delete()">SUBMIT</button></br>
+ </div>
+
+
+
+<div id="header" class="tabcontent">
+    <button class="btn">REQUEST HEADER</button></br>
+    <button class="btn">RESPONSE HEADER</button></br>
+</div>
+
+
+
+<div id="authentication" class="tabcontent">
+    <button class="btn" onclick="openForm()">BASIC AUTH</button>
+<div class="container" id="myForm">
+  <form  class="form-container">
+    <label for="uname">username</label>
+    <input type="text" placeholder="Enter usename" name="uname" required></br>
+    <label for="psw">Password</label>
+    <input type="password" placeholder="Enter Password" name="psw" required></br>
+    <button type="submit" class="btn">Submit</button>
+     </form>
+</div>
+</div>
+
+
+
+<div id="doc"></div>
+
+<script>
+ function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+  var  tabcontent = document.getElementsByClassName("tabcontent");
+
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+}
+</script>
+</body>
+</html> 
