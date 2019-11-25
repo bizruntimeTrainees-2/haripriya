@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple DOM example</title>
+  </head>
+  <body>
+      <section>
+        <img src="dinosaur.png" alt="this img is not exist"/>
+        <p>Here we will add a link to the <a href="https://www.google.com/chrome/"></a></p>Page
+      </section>
+	  <script>
+		const link = document.querySelector('a');
+		link.textContent = 'page content';
+		link.href = 'https://www.google.com/';
+
+
+		const sect = document.querySelector('section');
+		const para = document.createElement('p');
+        para.textContent = 'creating and placing new nodes';
+		sect.appendChild(para);
+
+		const text=document.createTextNode('new node');
+		const linkPara = document.querySelector('p');
+        linkPara.appendChild(text);
+
+		//remove element
+		sect.removeChild(linkpara);
+		//manupulating color
+		para.style.color='red';
+		para.style.backgroundColor='black';
+		para.style.padding='10px';
+		//or
+		<style>
+          .highlight {
+           color: white;
+           background-color: black;
+           padding: 10px;
+           width: 250px;
+           text-align: center;
+          }
+        </style>
+		para.setAttribute('class', 'highlight');
+
+        //window object:
+		const div = document.querySelector('div');
+        let winWidth = window.innerWidth;
+        let winHeight = window.innerHeight;
+         
+         //dynamically alter w,h
+		 div.style.width = winWidth + 'px';
+         div.style.height = winHeight + 'px';
+
+
+
+	  </script>
+  </body>
+</html>
