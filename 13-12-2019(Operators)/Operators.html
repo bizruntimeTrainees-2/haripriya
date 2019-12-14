@@ -1,0 +1,31 @@
+<!doctype html>
+<html >
+ <head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.1.0/rxjs.umd.js"></script>
+ <script>
+  const  someFunction = () => {
+  document.write("do something"); 
+  document.write("123");
+  document.write("thinking");
+};
+ 
+const boundSomeFunction = rxjs.bindCallback(someFunction);
+boundSomeFunction().subscribe(values => {
+  document.write(values) 
+});
+function iCallMyCallbackSynchronously(cb) {
+  cb();
+}
+ 
+const boundSyncFn = rxjs.bindCallback(iCallMyCallbackSynchronously);
+const boundAsyncFn =rxjs.bindCallback(iCallMyCallbackSynchronously, null, rxjs.Scheduler.async);
+ 
+boundSyncFn().subscribe(() =>{
+document.write('I was sync!')});
+boundSyncFn().subscribe(() => document.write('I was sync function!'));
+boundAsyncFn().subscribe(() => document.write('I was async!'));
+document.write('This happened...');
+</script>
+</head>
+</body>
+</html>

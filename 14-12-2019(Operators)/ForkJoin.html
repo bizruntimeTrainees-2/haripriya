@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.1.0/rxjs.umd.js"></script>
+<script>
+/*forkJoin is an operator that takes any number of input observables which can be passed either as an array or a dictionary of input observables.forkJoin will wait for all passed observables to complete and then it will emit an array or an object with last values from corresponding observables*/
+
+
+/*const observable = rxjs.forkJoin([
+  rxjs.of(1, 2, 3,4,5),
+  Promise.resolve(8),
+  rxjs.timer(2000)
+]);
+observable.subscribe({
+   next: value => console.log(value),
+   complete:() => console.log('this is how  ending!')
+});*/
+
+const observable=rxjs.forkJoin([
+	foo:rxjs.of(1,2,3),
+	bar:Promise.resolve(8),
+	baz:rxjs.timer(4000),
+	]);
+      observable.subscribe({
+	  next:value=>console.log(value),
+	  complete:()=>console.log('this is how it ends')
+	 });
+</script>
+<title>Document</title>
+</head>
+<body>
+<div>Result on Console</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.1.0/rxjs.umd.js"></script>
+<script src="https://unpkg.com/@reactivex/rxjs@5.3.0/dist/global/Rx.js"></script>
+<script>
+//emit array as a sequence of values
+/*const arraySource=rxjs.from([1,2,3,4]);
+const subscribe=arraySource.subscribe(val => console.log(val));
+
+
+const promiseSource = rxjs.from(new Promise(resolve => resolve('Hello World!')));
+const subscribe = promiseSource.subscribe(val => console.log(val));
+
+
+const map=new Map();
+map.set(1,'Hi');
+map.set(2,'Bye');
+
+const mapSource=rxjs.from(map);
+const subscribe=mapSource.subscribe(val => console.log(val));
+
+const source =rxjs.from('Hello World');
+const subscribe = source.subscribe(val => console.log(val));
+
+
+function* generateDoubles(seed) {
+   let i = seed;
+   while (true) {
+     yield i;
+     i = 2 * i; // double it
+   }
+}
+const iterator = generateDoubles(3);
+const result = rxjs.from(iterator).pipe(take(1));
+result.subscribe(x => console.log(x));
+*/
+
+console.log('start');
+const array=[10,30,20];
+const result=rxjs.from(array,asyncScheduler);
+result.subscribe(x=>console.log(x));
+console.log('end');
+
+</script>
+<title>Document</title>
+</head>
+<body>
+<div>Result on Console</div>
+</body>
+</html>

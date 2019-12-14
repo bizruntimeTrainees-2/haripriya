@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.1.0/rxjs.umd.js"></script>
+
+<script>
+//emits any number of provided values in sequence
+const Source=rxjs.of(1,2,3,4,5,6);
+const subscribe = Source.subscribe(val => console.log(val));
+
+const Source1=rxjs.of({name:'A'},[1,2,3],function Heloo(){ return 'Helo,gdmng';});
+const subscribe = Source1.subscribe(val => console.log(val));
+</script>
+  <title>Document</title>
+ </head>
+ <body>
+  <div>Result on Console</div>
+ </body>
+</html>

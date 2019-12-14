@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.1.0/rxjs.umd.js"></script>
+
+
+<!--The promise will resolve to the last emitted value of the Observable once the Observable completes-->
+<script>
+const source$ = rxjs.Observable.interval(1000)
+.take(10)
+.map(x => x * 100);
+
+function promiseDelay(ms) {
+  return new Promise(resolve => {
+    setTimeout(() => resolve('done'), ms);
+  });
+}
+//projects each source value to an observable which is merge in the output observables,emitting values only from the most recently projected Observable
+source$.switchMap(x => promiseDelay(x)) 
+  .subscribe(x => console.log(x)); 
+
+source$.switchMap(promiseDelay) 
+  .subscribe(x => console.log(x)); 
+
+source$.takeUntil(doAsyncThing('hi'))
+  .subscribe(x => console.log(x))
+
+// or weird stuff you want to do like
+Observable.of(promiseDelay(100), promiseDelay(10000)).mergeAll()
+  .subscribe(x => console.log(x))
+  /*
+
+const myPromise = (willRejected)=> {
+	return new Promise((resolve, reject)=>
+	{
+		setTimeout (() => {
+			if (willRejected)
+			{
+				reject('rejected');
+			}
+			resolve('resolved');
+			}, 3000)
+		})
+	}
+	const souce$ = rxjs.of(true, false);
+	const example$  = souce$.pipe(
+	rxjs.operators.mergeMap( val =>
+	rxjs.from(myPromise(val))
+	.pipe(rxjs.operators.catchError(err => rxjs.of('Error: '+ err)) )
+	) 
+	)
+	const subscribe = example$.subscribe(
+	val => {console.log(val)},
+	err => {console.log(val)},
+	() => {console.log("All done")}
+	)*/
+</script>
+  <title>Document</title>
+ </head>
+ <body>
+  <div>Results On Console</div>
+ </body>
+</html>

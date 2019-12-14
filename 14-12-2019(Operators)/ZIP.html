@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.1.0/rxjs.umd.js"></script>
+
+
+
+
+<!--After all observables emit, emit values as an array-->
+
+<script>
+
+/*
+const age$ = rxjs.of(20,21,18);
+const name$ = rxjs.of('foo', 'bar','beer');
+const isDev$ = rxjs.of(true, true, false);
+
+rxjs.zip(age$,name$,isDev$).pipe(
+    rxjs.operators.map(([age,name, isDev]) => ({age, name, isDev})),
+)
+.subscribe(x => console.log(x));*/
+
+
+const sourceOne = rxjs.of('Hello');
+const sourceTwo = rxjs.of('World!');
+const sourceThree = rxjs.of('Goodbye');
+const sourceFour = rxjs.of('World!');
+//wait until all observables have emitted a value then emit all as an array
+const example = rxjs.zip(
+sourceOne,
+sourceTwo.pipe(rxjs.operators.delay(1000)),
+sourceThree.pipe(rxjs.operators.delay(2000)),
+sourceFour.pipe(rxjs.operators.delay(3000))
+);
+const subscribe = example.subscribe(val => console.log(val));
+</script>
+  <title>Document</title>
+ </head>
+ <body>
+  <div>Result on Console</div>
+ </body>
+</html>

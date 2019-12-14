@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.1.0/rxjs.umd.js"></script>
+
+
+
+<!--
+this race will return tht observable which observable have a source to save the next value-->
+<script>
+const obs1 = rxjs.interval(80000).pipe(rxjs.operators.mapTo('fast one'));
+const obs2 = rxjs.interval(60000).pipe(rxjs.operators.mapTo('medium one'));
+const obs3 = rxjs.interval(50000).pipe(rxjs.operators.mapTo('slow one'));
+ 
+var r = rxjs.race(obs3, obs1, obs2)
+.subscribe(
+  winner => console.log(winner)
+);
+</script>
+  <title>Document</title>
+ </head>
+ <body>
+  <div>Result on Console</div>
+ </body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.1.0/rxjs.umd.js"></script>
+
+
+<!--
+You can listen to click events with the aid of fromEvent operator. The aim of exhaustMap operator is to take a value from a stream and map it to an inner observable. The resulting stream receives values emitted by the inner stream-->
+
+<script>
+const clicks = rxjs.fromEvent(document,'click');
+const  higherOrder = clicks.pipe(
+rxjs.operators.exhaustMap((ev) => rxjs.interval(1000).pipe( rxjs.operators.take(3))));
+higherOrder.subscribe(x => console.log(x));
+</script>
+<title>Document</title>
+</head>
+<body>
+<div>Result on Console</div>
+</body>
+</html>
