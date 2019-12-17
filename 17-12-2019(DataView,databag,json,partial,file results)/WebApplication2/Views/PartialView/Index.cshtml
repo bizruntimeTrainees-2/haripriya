@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@Html.Partial("Login")
+
+<br />
+@{
+    Html.RenderPartial("Login");
+}
+
+
+<!--  PartialView Result:
+       1)PartialView is similar to web use Control
+       2)it is reusable prototype(it can use any another view)
+       3)extension:  .cshtml
+       4)Methods to access any partial View are
+         1)Html.Partial()
+         2)Html.RenderPartial()
+    Html.Partial()-method that returns HtmlString
+                  -rendered partial view result can be stored in HTMLSTRING
+                  -Can cache the result(from buffer,we an access)
+                  -slow in access
+    Html.RenderPartial()-method without any return value
+                        -directly render a string to response
+                        -can't be cached
+                        -fast in access
+-->

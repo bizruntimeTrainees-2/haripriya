@@ -1,0 +1,47 @@
+﻿
+<h2>Index</h2>
+HELOO! @ViewData["nameData"]
+HELOO! @ViewBag["name"]
+
+<h2>Products List</h2>
+<ol>
+    @foreach (var item in (List<string>)ViewData["Products"])
+    {
+        <li>@item</li>
+    }
+</ol>
+<h2>categories List</h2>
+<ol>
+    @foreach (var item in ViewBag.categories)
+    {
+        <li>@item</li>
+    }
+</ol>
+
+
+
+<!--
+
+    1)Rendering refers to the process of creating a visual representation 
+    on a display surface
+
+   111)ViewData:
+    1)property of controllerBase class
+    is of type viewDataDictionary,this type is ICollection<string,object>
+    ViewData.Add("key",value);
+    ViewData["key"]=value;
+    DisAd With viewData:
+    1>It store Complex values but Can't return them directly on callback
+    2>It is available only for current request
+
+   222)ViewBag:
+    1)it is of type "DYNAMIC(it it resolve at Runtime)"
+        viewBag.name=value;
+        viewBag.ref=value;
+    2)direct return complex value on call back.s
+    3)Viewbag is available only for current request.
+    
+
+  
+
+    -->
