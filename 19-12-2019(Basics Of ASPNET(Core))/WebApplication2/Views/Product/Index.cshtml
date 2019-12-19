@@ -1,0 +1,7 @@
+﻿@Model List<WebApplication2.Models.Product1>
+<h2 align="center">Products Catalog</h2>
+
+@foreach(var item in Model)
+{
+    @Html.Partial("ProtoType", item);
+}

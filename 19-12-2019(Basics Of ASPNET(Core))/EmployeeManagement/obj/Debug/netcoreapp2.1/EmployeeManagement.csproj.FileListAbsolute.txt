@@ -1,0 +1,14 @@
+E:\BASICS OF C#(VISUAL STUDIO)\ASPNET CORE\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp2.1\EmployeeManagement.deps.json
+E:\BASICS OF C#(VISUAL STUDIO)\ASPNET CORE\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp2.1\EmployeeManagement.runtimeconfig.json
+E:\BASICS OF C#(VISUAL STUDIO)\ASPNET CORE\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp2.1\EmployeeManagement.runtimeconfig.dev.json
+E:\BASICS OF C#(VISUAL STUDIO)\ASPNET CORE\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp2.1\EmployeeManagement.dll
+E:\BASICS OF C#(VISUAL STUDIO)\ASPNET CORE\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp2.1\EmployeeManagement.pdb
+E:\BASICS OF C#(VISUAL STUDIO)\ASPNET CORE\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp2.1\EmployeeManagement.csprojAssemblyReference.cache
+E:\BASICS OF C#(VISUAL STUDIO)\ASPNET CORE\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp2.1\EmployeeManagement.RazorAssemblyInfo.cache
+E:\BASICS OF C#(VISUAL STUDIO)\ASPNET CORE\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp2.1\EmployeeManagement.RazorAssemblyInfo.cs
+E:\BASICS OF C#(VISUAL STUDIO)\ASPNET CORE\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp2.1\EmployeeManagement.AssemblyInfoInputs.cache
+E:\BASICS OF C#(VISUAL STUDIO)\ASPNET CORE\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp2.1\EmployeeManagement.AssemblyInfo.cs
+E:\BASICS OF C#(VISUAL STUDIO)\ASPNET CORE\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp2.1\EmployeeManagement.RazorTargetAssemblyInfo.cache
+E:\BASICS OF C#(VISUAL STUDIO)\ASPNET CORE\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp2.1\EmployeeManagement.dll
+E:\BASICS OF C#(VISUAL STUDIO)\ASPNET CORE\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp2.1\EmployeeManagement.pdb
+E:\BASICS OF C#(VISUAL STUDIO)\ASPNET CORE\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp2.1\EmployeeManagement.csproj.CoreCompileInputs.cache
