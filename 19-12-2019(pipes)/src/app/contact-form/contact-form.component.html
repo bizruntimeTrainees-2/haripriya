@@ -1,0 +1,18 @@
+<form>
+    <div class="form-group">
+    <label for="firstName">First Name</label>
+    <input required minlegth="3" maxlength="10" pattern="banana" ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)" id="firstName" type="text" class="form-control"/>
+    <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+       <div *ngIf="firstName.errors.required">First name is required</div>
+       <div> firstName</div>
+    </div>
+</div>
+    <div class="form-group">
+    <label for="comment">Comment</label>
+    <textarea ngModel name="comment" id="comment" cols="20" rows="10" class="form-control"></textarea>
+    </div>
+    <button class="btn-btn-primary">Submit</button>
+</form>
+<!--
+    1)ngmodel directive binds the value of html controls to application data.
+-->

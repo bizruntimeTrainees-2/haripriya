@@ -1,0 +1,36 @@
+<h2>PIPES</h2>
+{{name | lowercase}}<br>
+{{name | uppercase}}<br>
+{{name | titlecase}}<br>
+{{0.90 | percent}}<br>
+{{0.09 |currency}}<br>
+{{90 | currency:'GBP'}}<br>
+{{0.90 |currency:'INR'}}
+
+<h2> Paramerterizing Pipes</h2>
+
+{{name | slice:0:15}}<br>
+
+{{5.678 | number:'1.1-2' }}<br>
+
+{{5.678 | number:'3.4-5'}} <br>
+
+{{TestDate | date}}<br>
+
+{{TestDate}}<br>
+
+{{TestDate | date:'short'}}<br>
+
+{{TestDate | date:'shortDate'}}
+
+<h2>Chaining Pipes</h2>
+
+{{TestDate | date:'short' | uppercase}}
+
+<h2>Custom pipes</h2>
+
+<select>
+    <option *ngFor='let hero of superHeros' [value]="hero.Id">
+        {{hero.Name | CustomHero: hero.Id}}
+    </option> 
+</select>       
